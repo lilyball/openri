@@ -1,5 +1,4 @@
 require 'rubygems'
-require 'rubygems/installer'
 require 'rake'
 require 'rake/gempackagetask'
 
@@ -12,5 +11,5 @@ end
 
 desc 'Install openri'
 task :install_gem => :gem do
-  Gem::Installer.new("#{gemtask.package_dir}/#{gemtask.gem_file}").install
+  exec "gem", "install", "#{gemtask.package_dir}/#{gemtask.gem_file}"
 end
