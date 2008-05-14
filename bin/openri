@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require 'rubygems'
+require File.dirname(__FILE__) + "/../lib/openri"
 
 def usage
   puts <<-EOF
@@ -10,22 +10,8 @@ Opens the generated rdoc HTML for the specified gem.
 EOF
 end
 
-def openri(name)
-  gems = Gem.source_index.find_name(name)
-  if gems.empty?
-    # try and find based on require name
-    gem = Gem.searcher.find(name)
-    if gem.nil?
-      raise "No gems matched '#{name}'"
-    end
-  else
-    gem = gems[0]
-  end
-  exec 'open', "file://#{gem.installation_path}/doc/#{gem.full_name}/rdoc/index.html"
-end
-
 if ARGV.empty? or ARGV[0] == '-h' or ARGV[0] == '--help'
   usage
 else
-  openri ARGV[0]
+  OpenRi.open ARGV[0]
 end

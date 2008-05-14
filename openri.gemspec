@@ -11,9 +11,11 @@ Gem::Specification.new do |s|
   s.description = "Quickly open documentation for your Gems in your browser"
   s.email = "kevin@sb.org"
   s.executables = ["openri"]
-  s.files = ["bin/openri", "LICENSE", "README", "openri.gemspec"]
-  s.has_rdoc = false
+  s.extra_rdoc_files = ["LICENSE", "README", "bin/openri"]
+  s.files = ["bin/openri", "lib/openri.rb", "LICENSE", "README", "openri.gemspec"]
+  s.has_rdoc = true
   s.homepage = "http://github.com/kballard/openri"
   s.rubygems_version = "1.1.1"
   s.summary = s.description
+  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "openri", "--main", "README"]
 end
