@@ -13,6 +13,12 @@ module OpenRi
     else
       gem = gems[0]
     end
-    exec 'open', "file://#{gem.installation_path}/doc/#{gem.full_name}/rdoc/index.html"
+    open_url("file://#{gem.installation_path}/doc/#{gem.full_name}/rdoc/index.html")
+  end
+
+  def self.open_url(url)
+    # this works on OS X
+    # I don't know what's necessary for other platforms
+    exec "open", url
   end
 end
