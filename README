@@ -10,10 +10,10 @@ The gem can be specified either by gem name or by require name.
 
 == Usage
 
-`openri gemname`
+  $ openri gemname
 
 === Examples
 
-$ openri activerecord
+  $ openri activerecord
 
 Opens the documentation for ActiveRecord
