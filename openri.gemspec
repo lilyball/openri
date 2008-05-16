@@ -17,5 +17,5 @@ Gem::Specification.new do |s|
   s.homepage = "http://github.com/kballard/openri"
   s.rubygems_version = "1.1.1"
   s.summary = s.description
-  s.rdoc_options = ["--line-numbers", "--inline-source", "--title", "openri", "--main", "README"]
+  s.rdoc_options = ["--inline-source", "--title", "openri", "--main", "README"]
 end
