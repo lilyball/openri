@@ -11,5 +11,5 @@ end
 
 desc 'Install openri'
 task :install_gem => :gem do
-  exec "gem", "install", "#{gemtask.package_dir}/#{gemtask.gem_file}"
+  exec "sudo", "gem", "install", "#{gemtask.package_dir}/#{gemtask.gem_file}"
 end

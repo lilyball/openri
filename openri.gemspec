@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "openri"
-  s.version = "0.1"
+  s.version = "0.2"
 
   s.specification_version = 2 if s.respond_to? :specification_version=
 
@@ -18,4 +18,5 @@ Gem::Specification.new do |s|
   s.rubygems_version = "1.1.1"
   s.summary = s.description
   s.rdoc_options = ["--inline-source", "--title", "openri", "--main", "README"]
+  s.add_dependency('launchy', [">= 0"])
 end
